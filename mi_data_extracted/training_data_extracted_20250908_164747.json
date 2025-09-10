@@ -1,0 +1,47 @@
+[
+  {
+    "week": 1,
+    "day": 1,
+    "duration": "01:08:09",
+    "distance": "6.0",
+    "avg_pace": "11:20",
+    "avg_hr": "116",
+    "max_hr": null,
+    "avg_cadence": null,
+    "calories": "420",
+    "active_calories": "314",
+    "total_calories": "420",
+    "steps": "7425",
+    "filename": "Session_W1_D1.jpg"
+  },
+  {
+    "week": 1,
+    "day": 2,
+    "duration": "00:38:18",
+    "distance": "4.2",
+    "avg_pace": "9:02",
+    "avg_hr": "151",
+    "max_hr": null,
+    "avg_cadence": null,
+    "calories": "384",
+    "active_calories": "324",
+    "total_calories": "384",
+    "steps": "5234",
+    "filename": "Session_W1_D2.JPG"
+  },
+  {
+    "week": 1,
+    "day": 3,
+    "duration": "00:34:56",
+    "distance": "4.1",
+    "avg_pace": "8:37",
+    "avg_hr": "144",
+    "max_hr": null,
+    "avg_cadence": null,
+    "calories": "323",
+    "active_calories": "269",
+    "total_calories": "323",
+    "steps": "5002",
+    "filename": "Session_W1_D3.JPG"
+  }
+]

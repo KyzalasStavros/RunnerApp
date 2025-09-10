@@ -1,0 +1,11 @@
+# Core dependencies for 5K Training Plan
+matplotlib>=3.4.0
+numpy>=1.21.0
+
+# Streamlit Dashboard dependencies
+streamlit>=1.28.0
+pandas>=2.0.0
+plotly>=5.15.0
+
+# Development and testing
+pytest>=6.2.0
