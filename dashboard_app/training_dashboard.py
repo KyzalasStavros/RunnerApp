@@ -18,6 +18,7 @@ import numpy as np
 # Add parent directory to path to import our training plan
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.training_plan import TrainingPlan
+from dashboard_app.pace_calculator import render_pace_calculator, PaceCalculator, get_current_base_speed_kmh, get_current_fixed_pace_mode
 
 
 class TrainingDashboard:
@@ -89,7 +90,14 @@ class TrainingDashboard:
     
     def calculate_distances(self, df):
         """Calculate running and total distances with fatigue modeling"""
-        base_speed_kmh = 12.0
+        print(f"\n📊 DASHBOARD: Starting distance calculation for {len(df)} rows")
+        
+        # Get base speed from pace calculator using static functions
+        base_speed_kmh = get_current_base_speed_kmh()
+        is_fixed_pace = get_current_fixed_pace_mode()
+        
+        print(f"📊 DASHBOARD: Using base_speed={base_speed_kmh:.2f} km/h, fixed_pace={is_fixed_pace}")
+        
         walk_speed_m_per_min = 100
         
         running_distances = []
@@ -100,17 +108,21 @@ class TrainingDashboard:
             walk_min = row['Walk (min)']
             sets = row['Sets']
             
-            # Adjust speed based on interval duration
-            if run_min <= 1:
+            # Adjust speed based on interval duration (only if not in fixed pace mode)
+            if is_fixed_pace:
                 speed_kmh = base_speed_kmh
-            elif run_min <= 2.5:
-                speed_kmh = base_speed_kmh * 0.9
-            elif run_min <= 5:
-                speed_kmh = base_speed_kmh * 0.8
-            elif run_min <= 10:
-                speed_kmh = base_speed_kmh * 0.75
             else:
-                speed_kmh = base_speed_kmh * 0.7
+                # Adjust speed based on interval duration
+                if run_min <= 1:
+                    speed_kmh = base_speed_kmh
+                elif run_min <= 2.5:
+                    speed_kmh = base_speed_kmh * 0.9
+                elif run_min <= 5:
+                    speed_kmh = base_speed_kmh * 0.8
+                elif run_min <= 10:
+                    speed_kmh = base_speed_kmh * 0.75
+                else:
+                    speed_kmh = base_speed_kmh * 0.7
             
             # Calculate distances
             if walk_min == 0:  # Continuous run
@@ -222,6 +234,7 @@ class TrainingDashboard:
             title_text="Training Plan Progression Analysis",
             title_x=0.0,  # Left-aligned title instead of centered
             title_font_size=14,  # Slightly smaller font to fit better
+            title_pad=dict(t=10, b=5),  # Reduced padding above (t) and below (b) title
             height=950,  # Increased height to match table height
             showlegend=True,
             legend=dict(
@@ -237,7 +250,7 @@ class TrainingDashboard:
                 itemsizing='constant',  # Consistent sizing
                 tracegroupgap=5,  # Space between legend items
             ),
-            margin=dict(l=60, r=30, t=140, b=50)  # Increased top margin even more for better spacing
+            margin=dict(l=60, r=30, t=80, b=30)  # Reduced top and bottom margins for less spacing
         )
         
         # Update axes labels for vertical layout
@@ -614,6 +627,11 @@ class TrainingDashboard:
                 st.rerun()
         
         with col2:
+            # Add pace calculator first
+            render_pace_calculator()
+            
+            st.markdown("---")  # Separator line
+            
             st.header("📊 Live Progression Charts")
             
             # Calculate distances and create charts
