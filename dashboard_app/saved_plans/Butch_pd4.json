@@ -1,6 +1,6 @@
 {
   "name": "Butch_pd4",
-  "created": "2025-09-10T12:38:12.156830",
+  "created": "2025-09-12T10:21:23.243494",
   "sessions": [
     {
       "Session": 1,
@@ -62,10 +62,10 @@
       "Week": 2,
       "Day": 4,
       "Run (min)": 4.0,
-      "Walk (min)": 3.0,
+      "Walk (min)": 2.0,
       "Sets": 8,
       "Total Run (min)": 32.0,
-      "Total Workout (min)": 56.0,
+      "Total Workout (min)": 48.0,
       "Workout Type": "Intervals"
     },
     {
@@ -95,10 +95,10 @@
       "Week": 3,
       "Day": 4,
       "Run (min)": 6.0,
-      "Walk (min)": 3.0,
+      "Walk (min)": 2.0,
       "Sets": 6,
       "Total Run (min)": 36.0,
-      "Total Workout (min)": 54.0,
+      "Total Workout (min)": 48.0,
       "Workout Type": "Intervals"
     },
     {
@@ -151,9 +151,9 @@
       "Day": 2,
       "Run (min)": 5.0,
       "Walk (min)": 1.5,
-      "Sets": 7,
-      "Total Run (min)": 35.0,
-      "Total Workout (min)": 45.5,
+      "Sets": 8,
+      "Total Run (min)": 40.0,
+      "Total Workout (min)": 52.0,
       "Workout Type": "Intervals"
     },
     {
@@ -161,32 +161,32 @@
       "Week": 5,
       "Day": 4,
       "Run (min)": 8.0,
-      "Walk (min)": 2.0,
+      "Walk (min)": 1.5,
       "Sets": 6,
       "Total Run (min)": 48.0,
-      "Total Workout (min)": 60.0,
+      "Total Workout (min)": 57.0,
       "Workout Type": "Intervals"
     },
     {
       "Session": 16,
       "Week": 6,
       "Day": 1,
-      "Run (min)": 35.0,
+      "Run (min)": 36.0,
       "Walk (min)": 0.0,
       "Sets": 1,
-      "Total Run (min)": 35.0,
-      "Total Workout (min)": 35.0,
+      "Total Run (min)": 36.0,
+      "Total Workout (min)": 36.0,
       "Workout Type": "Continuous"
     },
     {
       "Session": 17,
       "Week": 6,
       "Day": 2,
-      "Run (min)": 4.0,
+      "Run (min)": 7.0,
       "Walk (min)": 1.0,
-      "Sets": 9,
-      "Total Run (min)": 36.0,
-      "Total Workout (min)": 45.0,
+      "Sets": 6,
+      "Total Run (min)": 42.0,
+      "Total Workout (min)": 48.0,
       "Workout Type": "Intervals"
     },
     {
@@ -194,10 +194,10 @@
       "Week": 6,
       "Day": 4,
       "Run (min)": 9.0,
-      "Walk (min)": 2.0,
+      "Walk (min)": 1.0,
       "Sets": 5,
       "Total Run (min)": 45.0,
-      "Total Workout (min)": 55.0,
+      "Total Workout (min)": 50.0,
       "Workout Type": "Intervals"
     },
     {
@@ -205,32 +205,32 @@
       "Week": 7,
       "Day": 1,
       "Run (min)": 20.0,
-      "Walk (min)": 0.0,
-      "Sets": 1,
-      "Total Run (min)": 20.0,
-      "Total Workout (min)": 20.0,
-      "Workout Type": "Continuous"
+      "Walk (min)": 4.0,
+      "Sets": 2,
+      "Total Run (min)": 40.0,
+      "Total Workout (min)": 48.0,
+      "Workout Type": "Intervals"
     },
     {
       "Session": 20,
       "Week": 7,
       "Day": 2,
-      "Run (min)": 15.0,
-      "Walk (min)": 0.0,
-      "Sets": 1,
-      "Total Run (min)": 15.0,
-      "Total Workout (min)": 15.0,
-      "Workout Type": "Continuous"
+      "Run (min)": 4.0,
+      "Walk (min)": 3.0,
+      "Sets": 4,
+      "Total Run (min)": 16.0,
+      "Total Workout (min)": 28.0,
+      "Workout Type": "Intervals"
     },
     {
       "Session": 21,
       "Week": 7,
       "Day": 4,
-      "Run (min)": 2.0,
-      "Walk (min)": 1.0,
-      "Sets": 5,
-      "Total Run (min)": 10.0,
-      "Total Workout (min)": 15.0,
+      "Run (min)": 18.0,
+      "Walk (min)": 10.0,
+      "Sets": 1,
+      "Total Run (min)": 18.0,
+      "Total Workout (min)": 28.0,
       "Workout Type": "Intervals"
     }
   ]

@@ -18,7 +18,7 @@ import numpy as np
 # Add parent directory to path to import our training plan
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.training_plan import TrainingPlan
-from dashboard_app.pace_calculator import render_pace_calculator, PaceCalculator, get_current_base_speed_kmh, get_current_fixed_pace_mode
+from dashboard_app.pace_calculator import render_pace_calculator, PaceCalculator, get_current_base_speed_kmh, get_current_fixed_pace_mode, get_current_walking_speed_m_per_min
 
 
 class TrainingDashboard:
@@ -92,13 +92,12 @@ class TrainingDashboard:
         """Calculate running and total distances with fatigue modeling"""
         print(f"\n📊 DASHBOARD: Starting distance calculation for {len(df)} rows")
         
-        # Get base speed from pace calculator using static functions
+        # Get speeds from pace calculator using static functions
         base_speed_kmh = get_current_base_speed_kmh()
+        walk_speed_m_per_min = get_current_walking_speed_m_per_min()
         is_fixed_pace = get_current_fixed_pace_mode()
         
-        print(f"📊 DASHBOARD: Using base_speed={base_speed_kmh:.2f} km/h, fixed_pace={is_fixed_pace}")
-        
-        walk_speed_m_per_min = 100
+        print(f"📊 DASHBOARD: Using base_speed={base_speed_kmh:.2f} km/h, walk_speed={walk_speed_m_per_min:.1f} m/min, fixed_pace={is_fixed_pace}")
         
         running_distances = []
         total_distances = []
